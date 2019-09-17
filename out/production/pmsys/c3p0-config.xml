@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<c3p0-config>
+    <!-- Configuration -->
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/pmsys</property>
+        <!-- database username -->
+        <property name="user">root</property>
+        <!-- database password -->
+        <property name="password">123456</property>
+        <!-- initialize database connection pool size -->
+        <property name="initialPoolSize">10</property>
+        <!-- max pool size -->
+        <property name="maxPoolSize">100</property>
+        <!-- min pool size -->
+        <property name="minPoolSize">10</property>
+        <!-- upper limit of each batch statement -->
+        <property name="maxStatements">200</property>
+    </default-config>
+    <!-- Configuration -->
+    <named-config name="team10"><!-- -->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/pmsys</property>
+        <property name="user">root</property><!-- database username -->
+        <property name="password">123456</property><!-- database password -->
+        <property name="acquireIncrement">10</property><!-- number of increments per time when data connections are insufficient -->
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxPoolSize">100</property>
+        <property name="maxStatements">200</property>
+        <property name="maxStatementsPerConnection">20</property>
+    </named-config>
+</c3p0-config>
